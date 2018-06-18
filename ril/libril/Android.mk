@@ -31,17 +31,17 @@ LOCAL_STATIC_LIBRARIES := \
 
 LOCAL_CFLAGS += -Wno-unused-parameter
 
-ifeq ($(SIM_COUNT), 2)
+#ifeq ($(SIM_COUNT), 2)
     LOCAL_CFLAGS += -DANDROID_MULTI_SIM -DDSDA_RILD1
     LOCAL_CFLAGS += -DANDROID_SIM_COUNT_2
-endif
+#endif
 
 ifneq ($(filter xmm6262 xmm6360,$(BOARD_MODEM_TYPE)),)
 LOCAL_CFLAGS += -DMODEM_TYPE_XMM6262
 endif
-ifeq ($(BOARD_MODEM_TYPE),xmm6260)
+#ifeq ($(BOARD_MODEM_TYPE),xmm6260)
 LOCAL_CFLAGS += -DMODEM_TYPE_XMM6260
-endif
+#endif
 ifneq ($(filter m7450 mdm9x35 ss333 tss310 xmm7260,$(BOARD_MODEM_TYPE)),)
 LOCAL_CFLAGS += -DSAMSUNG_NEXT_GEN_MODEM
 endif
